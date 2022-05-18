@@ -14,12 +14,12 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class APIService {
 
     private final WebClient webClient;
-    private final RestTemplate restTemplate;
+
 
     @Autowired
-    public APIService(WebClient webClient, RestTemplate restTemplate){
+    public APIService(WebClient webClient){
         this.webClient = webClient;
-        this.restTemplate = restTemplate;
+
     }
     @Value("${neuefische.capstone.nasa.api.key}")
     private String API_KEY;

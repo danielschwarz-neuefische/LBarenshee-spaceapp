@@ -18,8 +18,4 @@ public class BackendApplication {
         return WebClient.create("https://api.nasa.gov");
     }
 
-    @Bean
-    public RestTemplate getRestTemplate(){
-        return new RestTemplate();
-    }
 }
