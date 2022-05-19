@@ -13,9 +13,9 @@ public class NasaPicture {
     private String title;
     private String date;
     private String explanation;
+    private String copyright;
     private String url;
     private String hdurl;
-    private String copyright;
     @JsonProperty("media_type")
     private String mediaType;
     @JsonProperty("service_version")

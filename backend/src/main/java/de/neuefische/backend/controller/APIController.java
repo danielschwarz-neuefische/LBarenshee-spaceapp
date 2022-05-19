@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("picoftheday")
+@RequestMapping("/picoftheday")
 public class APIController {
 
     private final APIService apiService;
