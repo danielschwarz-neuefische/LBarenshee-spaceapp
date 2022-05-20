@@ -15,19 +15,19 @@ public class APIService {
 
 
     @Autowired
-    public APIService(WebClient webClient){
+    public APIService(WebClient webClient) {
         this.webClient = webClient;
-
     }
+
     @Value("${neuefische.capstone.nasa.api.key}")
     private String API_KEY;
 
 
-    public NasaPicture getPictureOfTheDay(){
+    public NasaPicture getPictureOfTheDay() {
         //API Call
         NasaPicture nasaPicture = webClient
                 .get()
-                .uri("/planetary/apod?api_key="+API_KEY)
+                .uri("/planetary/apod?api_key=" + API_KEY)
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()
                 .toEntity(NasaPicture.class)
